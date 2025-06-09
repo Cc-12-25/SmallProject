@@ -1,7 +1,7 @@
 <?php
 //如果沒有登入就跳到 html
 if(!isset($_SESSION['user'])){
-    header('Location: c.html');
+    header('Location: index.html');
     // exit();
     die();
 }

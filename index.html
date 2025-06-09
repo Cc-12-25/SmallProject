@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <style>
+    @media (max-width:768px) {
+        #bigLOGO{
+            display: none;
+        }
+    }
     #H {
         border-radius: 50%;
     }
@@ -135,9 +140,9 @@
         <div class="container-fluid">
             <a class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mySidebar"
                 aria-controls="mySidebar" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
-                <span class="navbar-toggler-icon"></span>
+                <span><img src="./img/hader_icon.jpg" alt="Logo" style="width: 80px;"></span>      
             </a>
-            <div>
+            <div id="bigLOGO">
                 <a class="navbar-brand" type="button" href="#">
                     <img src="./img/hader_icon.jpg" alt="Logo" style="width: 80px;">
                 </a>
@@ -157,8 +162,6 @@
                 </ul>
             </div>
             <form class="d-flex ms-auto" role="search">
-                <input class="form-control" type="search" style="width: 150px;">
-                <button class="btn btn-secondary " type="submit"><i class="bi bi-search"></i></button>
                 <a class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#SP" aria-controls="offcanvasRight"><i id="iconCart" class="bi bi-cart2" style="font-size: 20px;"></i></a>
                 <button class="btn" type="button"><i id="iconCircle" class="bi bi-person-circle" role="button"
                         style="font-size: 20px;"
@@ -567,13 +570,13 @@
                 modal.style.display = "none"
             }
         }
-        
         var modal = document.getElementById('id02')
         window.onclick=function(event){
             if(event.target === modal){
                 modal.style.display = "none"
             }
         }
+        
         // 側邊攔
         const offcanvasElementList = document.querySelectorAll('.offcanvas')
         const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap.Offcanvas(offcanvasEl))
