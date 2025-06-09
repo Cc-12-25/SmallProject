@@ -11,7 +11,7 @@ $password = $_REQUEST['pa'];
 $sql = "
     SELECT *
     FROM user
-    WHERE uid = ? AND password = ?
+    WHERE email = ? AND password = ?
 ";
 $stmt = $db->prepare($sql);  //PDO預處理SQL:防止被攻擊
 $stmt->execute([$uid, $password]);
